@@ -121,17 +121,39 @@ header {
     margin-top: 2%;
     margin-right: 15%;
     font-family: 'Signika Negative', sans-serif;
+    padding:10px;
+    font-size:20px;
 }
 
   /* Features */
 #Features {
-    background-color: rgb(187, 187, 187);
+    background-color: rgb(219, 219, 219);
     text-align:center;
     color:black;
-    padding-top: 7%;
+    padding-top: 4%;
 }
 
-.carousel-inner p {
-    width: 65%;
+#Features h2 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    padding-bottom: 3%;
+    font-size: 50px;
+}
+
+.Carousel_paragraph {
+    width: 40%;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 17px;
     text-align: justify;
+    
+}
+
+.Carousel_paragraph h4 {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: left;
+}
+
+.Feature_Image {
+    margin-right: 15%;
 }
