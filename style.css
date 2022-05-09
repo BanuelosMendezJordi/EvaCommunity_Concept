@@ -1,0 +1,137 @@
+/* General */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+nav a {
+    font-family: 'Titillium Web', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Header */
+header {
+    background-color: rgb(219, 219, 219);
+    background-size: cover;
+    height: 100vh;
+    display:flex;
+}
+
+.Header_Info {
+    color: black;
+    padding-top: 13%;
+    padding-left: 5%;
+    animation: fadeIn linear 2s;
+  -webkit-animation: fadeIn linear 2s;
+  -moz-animation: fadeIn linear 2s;
+  -o-animation: fadeIn linear 2s;
+  -ms-animation: fadeIn linear 2s;
+}
+
+.Header_Info button {
+    margin-top: 10px;
+    color:white;
+    text-transform: uppercase;
+    padding:10px;
+    font-size: 20px;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.Header_Info h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 150px;
+}
+
+.Header_Info h2 {
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.Eva_Img {
+    float: right;
+    margin-left:15%;
+    margin-top: 2%;
+    animation: fadeIn linear 2s;
+    -webkit-animation: fadeIn linear 2s;
+    -moz-animation: fadeIn linear 2s;
+    -o-animation: fadeIn linear 2s;
+    -ms-animation: fadeIn linear 2s;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+  
+@-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+  
+@-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+  
+@-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+  
+@-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+  /* About */
+#About {
+    background-color: #0e1128;
+    text-align:center;
+    color:white;
+    padding-top: 7%;
+}
+
+.About_Info {
+    display: flex;
+}
+
+#About h2 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    padding-bottom: 3%;
+    font-size: 50px;
+}
+
+.About_Info p {
+    font-family: 'Signika Negative', sans-serif;
+    padding-top: 3%;
+    text-align: justify;
+    width: 65%;
+    float: right;
+    margin-right: 15%;
+    font-size: 17px;
+}
+
+.About_Img {
+    float:left;
+    margin-left: 10%;
+    margin-bottom: 3%;
+}
+
+.About_Info button {
+    margin-top: 2%;
+    margin-right: 15%;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+  /* Features */
+#Features {
+    background-color: rgb(187, 187, 187);
+    text-align:center;
+    color:black;
+    padding-top: 7%;
+}
+
+.carousel-inner p {
+    width: 65%;
+    text-align: justify;
+}
