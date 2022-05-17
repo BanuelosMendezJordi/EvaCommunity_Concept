@@ -25,21 +25,71 @@
             <a class="nav-link" aria-current="page" href="Index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Forums</a>
+            <a class="nav-link" aria-current="page" href="Community_Forums.html">Forums</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Community_apps.html">Apps</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Community_SignIn.html">Sign In</a>
+            <a class="nav-link" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Sign In</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Community_SignUp.html">Sign Up</a>
+            <a class="nav-link" data-bs-toggle="modal" href="#exampleModalToggle2" role="button">Sign Up</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalToggleLabel">Sign in to your account</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Show a second modal and hide this one with the button below.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: rgb(27, 156, 231);">
+          <h5 class="modal-title" id="exampleModalToggleLabel2">Sign Up</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="needs-validation" autocomplete="off">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label"><i class="fa-solid fa-envelope"></i> Email address</label>
+              <input type="email" class="form-control" id="validationCustom01" aria-describedby="emailHelp" autocomplete="false" placeholder="EvaRobot@gmail.com">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label"><i class="fa-solid fa-user"></i> New username</label>
+              <input type="email" class="form-control" id="exampleInputUsername1" aria-describedby="UsernameHelp" autocomplete="false" placeholder="Eva">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"><i class="fa-solid fa-lock"></i> Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" autocomplete="false" placeholder="●●●●●●●●">
+            </div>
+          </form>
+          <div class="text-center">
+            <button class="btn btn-primary">Create Account</button>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <p>Already have an account? <a href="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Sign In</a></p>
+        </div>
+        <div style="text-align:center">
+        </div>
+      </div>
+    </div>
+  </div>
   <header class="container">
     <div class="container">
       <h1>Welcome to the Forums</h1>
@@ -189,7 +239,7 @@
               <div class="stats-title">
                 <h5>Your Stats</h5>
               </div>
-             <p><a href="Community_SignIn.html">Sign In</a> to check your activity in the forums</p>
+             <p><a data-bs-toggle="modal" href="#exampleModalToggle" >Sign In</a> to check your activity in the forums</p>
             </div>
           </div>
         </div>
@@ -199,5 +249,12 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>var myModal = document.getElementById('myModal')
+    var myInput = document.getElementById('myInput')
+    
+    myModal.addEventListener('shown.bs.modal', function () {
+      myInput.focus()
+    })
+    </script>
 </body>
 </html>
