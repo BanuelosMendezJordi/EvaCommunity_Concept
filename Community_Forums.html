@@ -17,8 +17,8 @@
 <body>
   <nav class="navbar main-navigation sticky-top navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid container">
-      <a href="#"><img src="Resources/Logo_lb.png" style="width:80px;"></a>
-      <a href="#"><img src="Resources/Eva_Community_logo.png" style="width:170px; margin:10px;"></a>
+      <a href="Community_Forums.html"><img src="Resources/Logo_lb.png" style="width:80px;"></a>
+      <a href="Community_Forums.html"><img src="Resources/Eva_Community_logo.png" style="width:170px; margin:10px;"></a>
       <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -40,18 +40,32 @@
       </div>
     </div>
   </nav>
-  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalToggleLabel">Sign in to your account</h5>
+        <div class="modal-header" style="background-color: rgb(27, 156, 231);">
+          <h5 class="modal-title" id="exampleModalToggleLabel">Sign In</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          Show a second modal and hide this one with the button below.
+          <form class="needs-validation" autocomplete="off">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label"><i class="fa-solid fa-user"></i> New username</label>
+              <input type="email" class="form-control" id="exampleInputUsername1" aria-describedby="UsernameHelp" autocomplete="false" placeholder="Eva">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"><i class="fa-solid fa-lock"></i> Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" autocomplete="false" placeholder="●●●●●●●●">
+            </div>
+          </form>
+          <div class="text-center">
+            <button class="btn btn-primary">Create Account</button>
+          </div>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+          <p>Already have an account? <a href="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Sign In</a></p>
+        </div>
+        <div style="text-align:center">
         </div>
       </div>
     </div>
