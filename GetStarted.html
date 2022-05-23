@@ -47,12 +47,14 @@
     <div class="header_div container">
       <h2>Get Started</h2>
       <div class="row">
-        <div class="col-6">
+        <div class="col-6 text-center">
+          <img src="Resources/Beginner_img.jpg" class="rounded mx-auto d-block">
           <p>For beginners, we developed a visual guide to help you understand and get access to the physical and logical components needed.</p>
-          <a href="#Beginner_Guide">
+          <a href="#Eva_Versions">
             <button type="button" class="btn btn-primary btn-lg"><i class="fa-solid fa-user"></i> I'm a Beginner</button></a>
         </div>
-        <div class="col-6">
+        <div class="col-6 text-center">
+          <img src="Resources/Expert_img.png" class="rounded mx-auto d-block">
           <p>For advanced users and developers, you can directly access to the Github repository containing the documentation and instructions.</p>
           <a href="https://github.com/eva-social-robot" target="_blank">
             <button type="button" class="btn btn-success btn-lg"><i class="fa-brands fa-github"></i> I'm a Developer</button></a>
@@ -62,47 +64,228 @@
   </header>
   <main>
     <section id="Eva_Versions">
-      <div class="container">
-        <h2>Eva Versions</h2>
-        <p>Before starting to build your project, we should keep in mind that there is currently more than one version, so it's important to properly identify which version is the most optimal for your needs and purposes.</p>
-        <div class="row">
-          <div class="col-4">  
-            <img src="Resources/Eva_Basic.PNG" class="rounded mx-auto d-block">
-            <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Basic</a>
-            <div class="collapse multi-collapse" id="multiCollapseExample1">
-              <div class="card card-body">
-                <p>The most basic version of the Eva social robot has three key capabilities:</p>
-                <ul>
-                  <li>Verbal interaction using a microphone array and a speaker.</li>
-                  <li>Eyes displaying through a 5,5" touchscreen</li>
-                  <li>Head movement using two Dynamixel AX-12A servomotors.</li>
-                </ul>
-              </div>
+      <div class="container versions">
+        <div class="versions_title">
+          <h2>Choosing between versions</h2>
+          <p>Before starting to build your project, we should keep in mind that there is currently more than one version, so it's important to properly identify which version is the most optimal for your needs and purposes.</p>
+        </div>
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <div class="row">
+                <div class="col-3">
+                  <img src="Resources/Eva_Basic.PNG" class="d-block w-100" alt="...">
+                </div>
+                <div class="col-8 text version_text">
+                    <h5>Eva Basic</h5>
+                    <p>The most basic version of the Eva social robot has three key capabilities:</p>
+                    <ul>
+                      <li>Verbal interaction using a speaker, and a Matrix Voice with a built-in microphone array and LEDs.</li>
+                      <li>Animated eyes, which are displayed in a 5,5" touchscreen.</li>
+                      <li>Head movement using two Dynamixel AX-12A servomotors.</li>
+                    </ul>
+                    <h5><i class="fa-solid fa-cube"></i> 3D Printable models</h5>
+                    <ul>
+                      <li><a href="https://github.com/eva-social-robot/3dmodels/tree/main/Common%20Parts" target="_blank">Common Parts</a></li>
+                      <li><a href="https://github.com/eva-social-robot/3dmodels/tree/main/Common%20Parts%20(Basic%20and%20with%20Camera%20versions)" target="_blank">Common Parts (Basic and Camera versions)</a></li>
+                      <li><a href="https://github.com/eva-social-robot/3dmodels/tree/main/Basic%20Version" target="_blank">Basic Version</a></li>
+                    </ul>
+                </div>
+              </div>  
             </div>
-          </div>
-          <div class="col-4">
-              <img src="Resources/Eva_Camera.PNG" class="rounded mx-auto d-block">
-              <h4>Camera</h4>
-          </div>
-          <div class="col-4">  
-              <img src="Resources/Eva_CameraMovement.PNG" class="rounded mx-auto d-block">
-              <h4>Movement</h4>
+            <div class="carousel-item" data-bs-interval="10000">
+              <div class="row">
+                <div class="col-3">
+                  <img src="Resources/Eva_Camera.PNG" class="d-block w-100" alt="...">
+                </div>
+                <div class="col-8 text version_text">
+                    <h5>Eva with Camera</h5>
+                    <p>This version inherits the capabilities of the basic version, along with a new key capability:</p>
+                    <ul>
+                      <li>Vision or sight, thanks to an Intel RealSense Depth Camera D435i, located at the top of the screen.</li>
+                      <li>This version modifies certain elements to properly adapt the camera device.</li>
+                    </ul>
+                    <h5><i class="fa-solid fa-cube"></i> 3D Printable models:</h5>
+                    <ul>
+                      <li><a href="https://github.com/eva-social-robot/3dmodels/tree/main/Common%20Parts" target="_blank">Common Parts</a></li>
+                      <li><a href="https://github.com/eva-social-robot/3dmodels/tree/main/Common%20Parts%20(Basic%20and%20with%20Camera%20versions)" target="_blank">Common Parts (Basic and Camera versions)</a></li>
+                      <li><a href="https://github.com/eva-social-robot/3dmodels/tree/main/Version%20with%20Camera" target="_blank">Camera Version</a></li>
+                    </ul>
+                </div>
+              </div>  
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-3">
+                  <img src="Resources/Eva_CameraMovement.PNG" class="d-block w-100" alt="...">
+                </div>
+                <div class="col-8 text version_text">
+                    <h5>Eva with Camera and Movement</h5>
+                    <p>This version inherits the capabilities of the previous two versions (basic and with camera); however, it contains a new key capability, which is the following:</p>
+                    <ul>
+                      <li>Movement: using two new motors/engines and wheels.</li>
+                      <li>This version discards the small legs to provide a fitting design for the movement functions.</li>
+                    </ul>
+                    <h5><i class="fa-solid fa-cube"></i> 3D Printable models:</h5>
+                    <ul>
+                      <li><a href="https://github.com/eva-social-robot/3dmodels/tree/main/Common%20Parts" target="_blank">Common Parts</a></li>
+                      <li><a href="https://github.com/eva-social-robot/3dmodels/tree/main/Version%20with%20Mobility" target="_blank">Version with Mobility</a></li>
+                      <li><a href="https://github.com/eva-social-robot/3dmodels/tree/main/Version%20with%20Camera" target="_blank">Camera Version</a></li>
+                    </ul>
+                </div>
+              </div>  
+            </div>
           </div>
         </div>
       </div>
     </section>
     <section id="Requirements">
-      <div class="container">
+      <div class="container requirements_div">
         <h2>Requirements</h2>
-        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-          <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-          <label class="btn btn-outline-primary" for="btnradio1"><i class="fa-brands fa-raspberry-pi"> </i> Raspberry Pi Components</label>
-          <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-          <label class="btn btn-outline-primary" for="btnradio2"><i class="fa-solid fa-robot"></i> EVA Hardware and Software</label>   
-          <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-          <label class="btn btn-outline-primary" for="btnradio3"><i class="fa-solid fa-microchip"></i> Other needed components</label>
+        <p class="Title_Requirements">Below you will find a list of the needed prerequisites and components to setup your initial Eva build.</p>
+        <h5 class="Table_Titles"><i class="fa-brands fa-raspberry-pi"></i> Relevant components</h5>
+        <div class="Components_Section">
+          <table class="table">
+            <tbody>
+              <tr>
+                <th scope="row"><img src="Resources/Pi_4B.jpg"></th>
+                <td>
+                  <!--Raspberry Pi 4B-->
+                  <div>
+                    <a href="https://www.raspberrypi.com/products/raspberry-pi-4-model-b/" target="_blank"><h5>Raspberry Pi 4B</h5></a>
+                  </div>
+                  <div>
+                    <p>A low cost, credit-card sized computer that has been used in a wide array of digital maker projects, from music machines and parent detectors to weather stations and tweeting birdhouses.</p>
+                  </div>
+                  <th scope="row"><img src="https://techcrunch.com/wp-content/uploads/2017/03/img_0587a.jpg?w=1500&crop=1"></th>
+                </td>
+                <td>
+                  <div>
+                    <a href="https://www.matrix.one/products/voice" target="_blank"><h5>Matrix Voice</h5></a>
+                  </div>
+                  <div>
+                    <p>MATRIX Voice is a development board for building sound driven behaviors and interfaces. It has a built-in microphone array and LEDs, and has been built to be a complete, affordable, and user-friendly tool for IoT voice app creation.</p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td scope="row"><img src="Resources/Pi_Buster.webp"></td>
+                <td>
+                  <div>
+                    <a href="https://www.raspberrypi.com/software/operating-systems/" target="_blank"><h5>Raspberry Pi OS</h5></a>
+                  </div>
+                  <div>
+                    <p>The official operating system for the Raspberry Pi. Based on Debian and previously called Raspbian, is required for the Raspberry Pi card to work. For Eva, it's necessary to download this <a href="https://downloads.raspberrypi.org/raspios_armhf/images/raspios_armhf-2021-05-28/2021-05-07-raspios-buster-armhf.zip">Buster version.</a></p>
+                  </div>
+                </td>
+                <th scope="row"><img src="https://m.media-amazon.com/images/I/71JSyAj-yZL.jpg"></th>
+                <td>
+                  <div>
+                    <a href="https://www.waveshare.com/5.5inch-hdmi-amoled.htm" target="_blank"><h5>Waveshare 5.5" Touch AMOLED Display</h5></a>
+                  </div>
+                  <div>
+                    <p>A 5.5inch Capacitive Touch AMOLED Display, with a 1080 x 1920 pixel resolution, HDMI and Toughened Glass Cover. It will allow to display Eva's eyes and select between a set of options that the applications offers.</p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><img src="https://assets.raspberrypi.com/static/md-bfd602be71b2c1099b91877aed3b41f0.png"></th>
+                <td>
+                  <div>
+                    <a href="https://www.raspberrypi.com/software/" target="_blank"><h5>Raspberry Pi Imager</h5></a>
+                  </div>
+                  <div>
+                    <p>Raspberry Pi Imager is the quick and easy way to install Raspberry Pi OS and other operating systems to a microSD card, ready to use with your Raspberry Pi.</p>
+                  </div>
+                  <th scope="row"><img src="https://c1.neweggimages.com/ProductImage/55-503-063-03.jpg"></th>
+                <td>
+                  <div>
+                    <a href="https://www.philips.com.mx/c-p/BT50W_37/altavoz-portatil-inalambrico" target="_blank"><h5>Philips BT50-37 Speaker</h5></a>
+                  </div>
+                  <div>
+                    <p> A compact-designed speaker with advanced audio performance, a built-in rechargable battery, anti-clipping function and easy connection to almost any electronic device.
+                  </p>
+                  </div>
+                </td>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><img src="https://emanual.robotis.com/assets/images/parts/controller/opencr10/opencr_product.png"></th>
+                <td>
+                  <div>
+                    <a href="https://www.robotis.us/opencr1-0/" target="_blank"><h5>Open CR 1.0 <span class="badge rounded-pill bg-success">Movement</span></h5></a>
+                  </div>
+                  <div>
+
+                  </div>
+                  <div>
+                    <p>Robotis OpenCR1.0 is an integrated open source robot controller with a powerful MCU from the ARM Cortex-M7 range, accessible and open to the public.</p>
+                  </div>
+                  <th scope="row"><img src="Resources/IL-ARBOTIXM-a.jpg"></th>
+                <td>
+                  <div>
+                    <a href="https://www.trossenrobotics.com/p/arbotix-robot-controller.aspx"><h5>ArbotiX-M <span class="badge rounded-pill bg-secondary">Basic</span> <span class="badge rounded-pill bg-primary">Camera</span></h5></a>
+                  </div>
+                  <div>
+                    <p>This versatile robot controller is an advanced control solution for BIOLOID and DYNAMIXEL based actuators. As an Arduino compatible microcontroller the Arbotix Robocontroller also benefits from a huge open source community of libraries and examples.</p>
+                  </div>
+                </td>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <h5 class="Table_Titles"><i class="fa-solid fa-microchip"></i> Other components</h5>
+          <table class="table table2">
+            <tbody>
+              <tr>
+                <td>
+                  <ul>
+                    <li>Ball Caster</li>
+                    <li>Bioloid Frame F2</li>
+                    <li>Bioloid Frame F3</li>
+                    <li>Dynamixel XL430-W250-T</li>
+                    <li>Two Dynamixel AX-12A servomotors</li>
+                    <li>GPIO Stacking header</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Intel® RealSense™ Depth Camera D435i <span class="badge rounded-pill bg-primary">Camera</span></li>
+                    <li>LI-PO 11.1V 1800mAh Lb-12 19.98Wh 5C</li>
+                    <li>Rotating HDMI Male-Female Adapter</li>
+                    <li>Two Robot wheels <span class="badge rounded-pill bg-success">Movement</span></li>
+                    <li>Two Robot tires <span class="badge rounded-pill bg-success">Movement</span></li>
+                    <li>SanDisk Extreme 64GB Micro SD Card (recommended for performance)</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div> 
+    </section>
+    <section id="Hardware">
+      <div class="container hardware_div">
+        <h2>Assembling</h2>
+        <p class="Title_Requirements">Once everything has been gathered up, you can start assembling each one of the 3D models and physical components.</p>
+        <div>
+
+        </div>
+      </div>
+    </section>
+    <section id="Software">
+      <div class="container software_div">
+        <h2>Installing</h2>
+        <p class="Title_Requirements">In order to correctly use Eva, you must install the correct operating system and configure the corresponding applications.</p>
+        <div>
+
+        </div>
+      </div>
     </section>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

@@ -17,7 +17,7 @@ nav a {
 header {
     background-color: #0e1128;
     color:white;
-    padding-top: 5%;
+    padding-top: 3%;
 }
 header h2{
     font-family: 'Oswald', sans-serif;
@@ -29,8 +29,10 @@ header h2{
 header p {
     font-family: 'Titillium Web', sans-serif;
     text-align: justify;
-    width: 90%;
     font-size: 20px;
+    width: 75%;
+    margin-left:auto;
+    margin-right: auto;
 }
 header a {
     font-family: 'Titillium Web', sans-serif;
@@ -38,27 +40,67 @@ header a {
 .header_div{
     padding-bottom: 3rem;
 }
+
+.header_div img {
+    max-width: 23rem;
+    min-width: 23rem;
+    border-radius: 1rem;
+    border-style: solid;
+    margin: 1rem;
+}
 /* Eva Versions*/
 #Eva_Versions {
     background-color: rgb(219, 219, 219);
     text-align:center;
     color:black;
-    padding-top: 4%;
+    padding-top: 2%;
 }
 
 #Eva_Versions h2{
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
-    padding-bottom: 2%;
+    padding-bottom: 1%;
     font-size: 50px;
     text-align: center;
 }
+#Eva_Versions h5{
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    text-align: left;
+}
+#Eva_Versions p {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+#Eva_Versions li {
+    text-align: left;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+.text p {
+    text-align: left;
+}
+.versions_title {
+    margin-bottom: 2rem;
+}
 
-#Eva_Versions img{
-    display: flex;
-    width: 12rem;
-    height: 19rem;
-    align-items: center;
+.versions {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.versions img {
+    min-height: 25rem;
+    max-height: 25rem;
+    border-radius: 1rem;
+    border-color: black;
+    border-style: solid;
+}
+
+.version_text {
+    border-radius: 1rem;
+    border-color: black;
+    border-style: solid;
 }
 
 /* Requirements */
@@ -74,7 +116,108 @@ header a {
     padding-bottom: 2%;
     font-size: 50px;
 }
+.Title_Requirements {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+.requirements_div {
+    padding-bottom: 2rem;
+}
+
 .btn-group{
     display: flex;
     font-family: 'Titillium Web', sans-serif;
+}
+
+.Components_Section table {
+    color: white;
+    border: 1px solid white;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.Components_Section img {
+    margin-top:1rem;
+    max-width: 11rem;
+    min-width: 11rem;
+    max-height: 8rem;
+    min-height: 8rem;
+}
+
+table a{
+    text-align: left;
+    color:white;
+    text-decoration: none;
+}
+table p {
+    text-align: justify;
+}
+table h5 {
+    font-weight: 700;
+}
+
+.Table_Titles {
+    font-family: 'Oswald', sans-serif;
+    text-align: left;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.Components_Section table {
+    color: white;
+    border: 1px solid white;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.table2 ul{
+    text-align: left;
+    padding-left: 32%;
+}
+
+/* Assembling */
+#Hardware {
+    background-color: rgb(219, 219, 219);
+    text-align:center;
+    color:black;
+    padding-top: 3%;
+}
+
+#Hardware h2{
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    padding-bottom: 1%;
+    font-size: 50px;
+    text-align: center;
+}
+#Hardware h5{
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    text-align: left;
+}
+#Hardware p {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+
+/* Installing */
+#Software {
+    background-color: #0e1128;
+    text-align:center;
+    color: white;
+    padding-top: 3%;
+}
+
+#Software h2{
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    padding-bottom: 1%;
+    font-size: 50px;
+    text-align: center;
+}
+#Software h5{
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    text-align: left;
+}
+#Software p {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
 }
