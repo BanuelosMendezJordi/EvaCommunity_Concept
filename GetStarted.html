@@ -10,7 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Signika+Negative:wght@300&display=swap" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet"> 
   <title>Platform Eva</title>
   <link rel="icon" href="Resources/icon_lb.png">
 </head>
@@ -212,16 +213,13 @@
                   </p>
                   </div>
                 </td>
-                </td>
+              </td>
               </tr>
               <tr>
                 <th scope="row"><img src="https://emanual.robotis.com/assets/images/parts/controller/opencr10/opencr_product.png"></th>
                 <td>
                   <div>
                     <a href="https://www.robotis.us/opencr1-0/" target="_blank"><h5>Open CR 1.0 <span class="badge rounded-pill bg-success">Movement</span></h5></a>
-                  </div>
-                  <div>
-
                   </div>
                   <div>
                     <p>Robotis OpenCR1.0 is an integrated open source robot controller with a powerful MCU from the ARM Cortex-M7 range, accessible and open to the public.</p>
@@ -273,23 +271,133 @@
       <div class="container hardware_div">
         <h2>Assembling</h2>
         <p class="Title_Requirements">Once everything has been gathered up, you can start assembling each one of the 3D models and physical components.</p>
-        <div>
-
-        </div>
       </div>
     </section>
     <section id="Software">
       <div class="container software_div">
         <h2>Installing</h2>
         <p class="Title_Requirements">In order to correctly use Eva, you must install the correct operating system and configure the corresponding applications.</p>
-        <div>
-
+        <div class="requirements row Table_Titles">
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS1" aria-expanded="false" aria-controls="collapseExample">
+            <div class="row">
+              <div class="col-11">
+                <h5>Step 1. Installing Raspberry Pi OS</h5>
+              </div>
+              <div class="col-1">
+                <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
+              </div>
+            </div>
+          </button>
+          <div class="collapse" id="collapseS1">
+            <div class="card card-body">
+              <ul>
+                <li>Insert your SD card into your computer.</li>
+                <li>Run the Raspberry Pi Imager installer and follow the installation instructions.</li>
+                <li>Once finished, run the installed application.</li>
+                <li>In the operating system section, select Choose OS > Use Custom > Select the Raspberry Pi OS version provided in the Requirements section (should be named 2021-05-07-raspios-buster-armhf).</li>
+                <li>In the Storage section, click on Choose Storage > Select the corresponding SD card.</li>
+                <li>Once selected, click on the Write button and wait until the operating system files get written inside the SD card.</li>
+                <li>Remove the SD card when a pop-up window displays the indication.</li>
+              </ul>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS2" aria-expanded="false" aria-controls="collapseExample">
+            <div class="row">
+              <div class="col-11">
+                <h5>Step 2. Configuring the operating system</h5>
+              </div>
+              <div class="col-1">
+                <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
+              </div>
+            </div>
+          </button>
+          <div class="collapse" id="collapseS2">
+            <div class="card card-body">
+              <ul>
+                <li>Insert the SD card into the Raspberry Pi 4B.</li>
+                <li>Turn on your Eva and wait a few moments until it boots up.</li>
+                <li>Follow the instructions in the initial setup; it's recommended to set the following as your username and password:</li>
+                <div class="code_container">
+                  <p>Username: pi</p>
+                  <p>Password: raspberry</p>
+                </div>
+                <li>Make sure to connect to a wireless network during this setup in order to obtain the initial updates.</li>
+                <li>Once finished, you can restart your operating system.</li>
+              </ul>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS3" aria-expanded="false" aria-controls="collapseExample">
+            <div class="row">
+              <div class="col-11">
+                <h5>Step 3. Enabling remote access</h5>
+              </div>
+              <div class="col-1">
+                <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
+              </div>
+            </div>
+          </button>
+          <div class="collapse" id="collapseS3">
+            <div class="card card-body">
+              <ul>
+                <li>Click on the start menu button</li>
+                <li>Go to Preferences > Raspberry Pi Configuration </li>
+                <li>Enable the VNC Server service.</li>
+                <li>Save changes and close the window.</li>
+                <li>Open the terminal and type the following command: ipadress</li>
+                <li>On your main computer, download and run <a href="https://www.realvnc.com/en/connect/download/viewer/" target="_blank">VNC Viewer.</a></li>
+                <li>In the input box, type the provided IP address and press Enter.</li>
+                <li>If the same IP as the Raspberry was inserted, a small prompt should popup requesting your credentials. Type the credentials used during the setup configuration:</li>
+                <div class="code_container">
+                  <p>Username: pi</p>
+                  <p>Password: raspberry</p>
+                </div>
+                <li>You should be able to operate the Raspberry Pi OS remotely from your own machine.</li>
+              </ul>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS4" aria-expanded="false" aria-controls="collapseExample">
+            <div class="row">
+              <div class="col-11">
+                <h5>Step 4. Obtaining the required drivers and dependencies</h5>
+              </div>
+              <div class="col-1">
+                <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
+              </div>
+            </div>
+          </button>
+          <div class="collapse" id="collapseS4">
+            <div class="card card-body">
+              <ul>
+                <li>Before installing other dependencies, type this command in your console:</li>
+                <p>sudo apt update</p>
+                <li>NodeJS 14.16.0 is needed to run Javascript applications and scripts. To install it, run the following commands in your console (one by one): </li>
+                <div class="code_container">
+                  <p>curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash</p>
+                  <p>source ~/.profile</p>
+                  <p>nvm install v14.16.0</p>
+                  <p>nvm use v14.16.0</p>
+                </div>
+                <li>Node Package Manager (NPM) is another dependency needed to run certain commands. To install it run the following command:</li>      
+                <div class="code_container">
+                  <p>sudo apt install npm</p>
+                </div>
+                <li>Another element needed is Electron. Copy the following command to install it:</li>      
+                <div class="code_container">
+                  <p>sudo npm i electron -g --verbose --unsafe-perm=true --allow-root</p>
+                </div>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
     </section>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>function myFunction(x) {
+    x.classList.toggle("fa-angle-up");
+  } </script>
 </body>
 </html>
