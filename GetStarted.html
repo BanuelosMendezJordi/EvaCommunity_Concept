@@ -276,7 +276,6 @@
     <section id="Software">
       <div class="container software_div">
         <h2>Installing</h2>
-        <p class="Title_Requirements">In order to correctly use Eva, you must install the correct operating system and configure the corresponding applications.</p>
         <div class="requirements row Table_Titles">
           <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS1" aria-expanded="false" aria-controls="collapseExample">
             <div class="row">
@@ -385,6 +384,120 @@
                 <div class="code_container">
                   <p>sudo npm i electron -g --verbose --unsafe-perm=true --allow-root</p>
                 </div>
+                <li>Once done, install the Matrix Voice drivers using the following commands:</li>
+                <div class="code_container">
+                  <p>curl https://s3.amazonaws.com:443/apt.matrix.one/doc/apt-key.gpg | sudo apt-key add -</p>
+                  <p>echo "deb https://apt.matrix.one/raspbian $(lsb_release -sc) main"</p>
+                  <p>sudo tee /etc/apt/sources.list.d/matrixlabs.list</p>
+                </div>
+                <li>Update and reboot with the following commands:</li>
+                <div class="code_container">
+                  <p>sudo apt-get update</p>
+                  <p>sudo apt-get upgrade</p>
+                  <p>sudo reboot</p>
+                </div>
+                <li>Once rebooted, run the following commands and reboot again when done:</li>
+                <div class="code_container">
+                  <p>sudo apt install matrixio-kernel-modules</p>
+                  <p>sudo apt-get install matrixio-creator-init libmatrixio-creator-hal libmatrixio-creator-hal-dev</p>
+                  <p>sudo reboot</p>
+                </div>
+              </ul>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS5" aria-expanded="false" aria-controls="collapseS5">
+            <div class="row">
+              <div class="col-11">
+                <h5>Step 5. Setting up Eva's eyes</h5>
+              </div>
+              <div class="col-1">
+                <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
+              </div>
+            </div>
+          </button>
+          <div class="collapse" id="collapseS5">
+            <div class="card card-body">
+              <ul>
+                <li>Using the Raspberry Pi, download the AppImage and source code from <a href="https://github.com/amitjans/eva-app/releases/tag/v1.2-rc" target="_blank">here</a>.</li>
+                <li>Place the downloaded files in your desired path (it's recommended to place the files inside a new folder).</li>
+                <li>Open your terminal to enter the following command and create a new service:</li>
+                <div class="code_container">
+                  <p>nano /etc/systemd/system/eva.service</p>
+                </div>
+                <li>Once ready, add the following code inside the file you just created (note: change User and ExecStart lines according to your user and directory where you put the AppImage file):</li>
+                <div class="code_container">
+                  <p>[Unit]</p>
+                  <p>Description=Eva</p>
+                  <p>After=network.target</p>
+                  <br>
+                  <p>[Service]</p>
+                  <p>Type=simple</p>
+                  <p>User=USER</p>
+                  <p>LimitNOFILE=1024</p>
+                  <br>
+                  <p>Restart=on-failure</p>
+                  <p>RestartSec=10</p>
+                  <p>startLimitIntervalSec=60</p>
+                  <p>Environment=DISPLAY=:0</p>
+                  <p>ExecStart=/PATH/TO/THE/APP.AppImage</p>
+                  <br>
+                  <p>PermissionsStartOnly=true</p>
+                  <p>StandardOutput=syslog</p>
+                  <p>StandardError=syslog</p>
+                  <br>
+                  <p>[Install]</p>
+                  <p>WantedBy=multi-user.target</p>
+                </div>
+                <li>Save the files and exit the editor.</li>
+                <li>Enable the service to be started at boot with these console commands:</li>
+                <div class="code_container">
+                  <p>systemctl enable eva.service</p>
+                  <p>systemctl --system daemon-reload</p>
+                </div>
+              </ul>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS6" aria-expanded="false" aria-controls="collapseS5">
+            <div class="row">
+              <div class="col-11">
+                <h5>Step 6. Enabling the web application for online start</h5>
+              </div>
+              <div class="col-1">
+                <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
+              </div>
+            </div>
+          </button>
+          <div class="collapse" id="collapseS6">
+            <div class="card card-body">
+              <ul>
+                <li>The following step is to install pm2, a process manager that will help in keeping the Eva web application online to access and control Eva's main functions from your browser:</li>
+                <div class="code_container">
+                  <p>npm install pm2 -g</p>
+                </div>
+                <li>The following commands will enable the Eva service for online access from any device connecter to the same network:</li>
+                <div class="code_container">
+                  <p>pm2 start ./app.js --name eva</p>
+                  <p>pm2 startup</p>
+                  <p>sudo env PATH=$PATH:/home/pi/.config/nvm/versions/node/v14.16.0/bin /home/pi/.config/nvm/versions/node/v14.16.0/lib/node_modules/pm2/bin/pm2 startup systemd -u pi --hp /home/pi</p>
+                  <p>pm2 save</p>
+                </div>
+              </ul>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS7" aria-expanded="false" aria-controls="collapseS5">
+            <div class="row">
+              <div class="col-11">
+                <h5>Step 7. Fixing the Visual Programming Language</h5>
+              </div>
+              <div class="col-1">
+                <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
+              </div>
+            </div>
+          </button>
+          <div class="collapse" id="collapseS7">
+            <div class="card card-body">
+              <ul>
+                <li>It's possible that when opening your Eva web application, the "Interaction" section may not be displaying correctly. This os due to the Visual Programming Language needing certain files from the GoJs Framework. </li>
               </ul>
             </div>
           </div>
