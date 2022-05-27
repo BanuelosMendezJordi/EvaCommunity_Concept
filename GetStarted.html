@@ -270,7 +270,31 @@
     <section id="Hardware">
       <div class="container hardware_div">
         <h2>Assembling</h2>
-        <p class="Title_Requirements">Once everything has been gathered up, you can start assembling each one of the 3D models and physical components.</p>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseH1" aria-expanded="false" aria-controls="collapseExample">
+          <div class="row">
+            <div class="col-11">
+              <h5>Step 1. Configuring the operating system</h5>
+            </div>
+            <div class="col-1">
+              <h5><i class="fa-solid fa-angle-down"></i></h5>
+            </div>
+          </div>
+        </button>
+        <div class="collapse" id="collapseH1">
+          <div class="card card-body">
+            <ul>
+              <li>Insert the SD card into the Raspberry Pi 4B.</li>
+              <li>Turn on your Eva and wait a few moments until it boots up.</li>
+              <li>Follow the instructions in the initial setup; it's recommended to set the following as your username and password:</li>
+              <div class="code_container">
+                <p>Username: pi</p>
+                <p>Password: raspberry</p>
+              </div>
+              <li>Make sure to connect to a wireless network during this setup in order to obtain the initial updates.</li>
+              <li>Once finished, you can restart your operating system.</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
     <section id="Software">
@@ -575,24 +599,34 @@
                   <p>cd /usr/share/X11/xorg.conf.d/</p>
                   <p>ls</p>
                 </div>
-                <li>Locate the file named </li>
+                <li>Locate the file named d/40-libinput.conf and open it using this command</li>
+                <div class="code_container">
+                  <p>sudo nano 40-libinput.conf</p>
+                </div>
+                <li>Once opened, search for the section that says "Identifier... Touchscreen catchall"</li>
+                <li>Add the following line at the end of the section:</li>
+                <div class="code_container">
+                  <p>Option "TransformationMatrix" "0 -1 1 1 0 0 0 0 1" </p>
+                </div>
+                <li>Save your changes and reboot your system. After reeboting, the screen and touchscreen should have the same orientation.</li>
               </ul>
             </div>
           </div>
           <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS9" aria-expanded="false" aria-controls="collapseS8">
             <div class="row">
               <div class="col-11">
-                <h5>Step 9. Fixing the Visual Programming Language</h5>
+                <h5>Observation. Visual Programming Language</h5>
               </div>
               <div class="col-1">
-                <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
+                <h5><i class="fa-solid fa-angle-down""></i></h5>
               </div>
             </div>
           </button>
           <div class="collapse" id="collapseS9">
             <div class="card card-body">
               <ul>
-                <li>It's possible that when opening your Eva web application, the "Interaction" section may not be displaying correctly. This is due to the Visual Programming Language needing certain files from the GoJs Framework.</li>
+                <li>It's possible that when opening your Eva web application, the "Interaction" section may not be displaying correctly. This is due to the Visual Programming Language needing certain files from the GoJs Framework. Right click on the "Interaction" page and select the "Inspect" option to display the errors related with this issue.</li>
+                <li>Access the <a href="https://gojs.net/latest/index.html" target="_blank">GoJs website</a> to explore the available documentation and scripts.</li>
               </ul>
             </div>
           </div>
