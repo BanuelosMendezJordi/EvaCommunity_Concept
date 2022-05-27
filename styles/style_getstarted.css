@@ -144,7 +144,6 @@ header a {
 table a{
     text-align: left;
     color:white;
-    text-decoration: none;
 }
 table p {
     text-align: justify;
@@ -259,4 +258,8 @@ table h5 {
 }
 .code_container p{
     font-size: 17px;
+}
+
+.card-body a {
+    color:white;
 }

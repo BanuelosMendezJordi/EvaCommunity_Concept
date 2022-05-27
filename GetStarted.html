@@ -283,7 +283,7 @@
                 <h5>Step 1. Installing Raspberry Pi OS</h5>
               </div>
               <div class="col-1">
-                <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
+                <h5><i class="fa-solid fa-angle-down"></i></h5>
               </div>
             </div>
           </button>
@@ -481,13 +481,14 @@
                   <p>sudo env PATH=$PATH:/home/pi/.config/nvm/versions/node/v14.16.0/bin /home/pi/.config/nvm/versions/node/v14.16.0/lib/node_modules/pm2/bin/pm2 startup systemd -u pi --hp /home/pi</p>
                   <p>pm2 save</p>
                 </div>
+                <li>Now that everything is done, you should be able to access the web application by entering the robot's IP in your browser.</li>
               </ul>
             </div>
           </div>
           <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS7" aria-expanded="false" aria-controls="collapseS5">
             <div class="row">
               <div class="col-11">
-                <h5>Step 7. Fixing the Visual Programming Language</h5>
+                <h5>Step 7. Enabling IBM and Google services</h5>
               </div>
               <div class="col-1">
                 <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
@@ -497,7 +498,101 @@
           <div class="collapse" id="collapseS7">
             <div class="card card-body">
               <ul>
-                <li>It's possible that when opening your Eva web application, the "Interaction" section may not be displaying correctly. This os due to the Visual Programming Language needing certain files from the GoJs Framework. </li>
+                <li>There are certain services that need to be enabled for Eva to work with all the available functions. To enable them, open your browser and access Eva using the provided IP, then go to the Services tab.</li>
+                <li>An empty list should be displaying all the available services but with empty values. To proceed, input the following values inside the corresponding variables:</li>
+                <div class="code_container">
+                  <table>
+                    <tr>
+                      <th>Variable</th>
+                      <th></th>
+                      <th>Value</th>
+                    </tr>
+                    <tr>
+                      <td>TEXT_TO_SPEECH_APIKEY</td>
+                      <td> </td>
+                      <td>tts-api-key</td>
+                    </tr>
+                    <tr>
+                      <td>TEXT_TO_SPEECH_URL</td>
+                      <td> </td>
+                      <td>https://stream.watsonplatform.net/text-to-speech/api</td>
+                    </tr>
+                    <tr>
+                      <td>SPEECH_TO_TEXT_APIKEY</td>
+                      <td> </td>
+                      <td>stt-api-key</td>
+                    </tr>
+                    <tr>
+                      <td>SPEECH_TO_TEXT_URL</td>
+                      <td> </td>
+                      <td>https://stream.watsonplatform.net/speech-to-text/api</td>
+                    </tr>
+                    <tr>
+                      <td>TRANSLATOR_APIKEY</td>
+                      <td> </td>
+                      <td>translator-api-key</td>
+                    </tr>
+                    <tr>
+                      <td>TRANSLATOR_URL</td>
+                      <td> </td>
+                      <td>https://api.us-south.language-translator.watson.cloud.ibm.com/</td>
+                    </tr>
+                    <tr>
+                      <td>GOOGLE_APPLICATION_CREDENTIALS</td>
+                      <td> </td>
+                      <td>credencial.json</td>
+                    </tr>
+                    <tr>
+                      <td>DIALOGFLOW_PROJECT_ID</td>
+                      <td> </td>
+                      <td>google-dialogflow-proyect-name</td>
+                    </tr>
+                  </table>
+                </div>
+                <li>If the values were entered correctly, a green check icon should display.</li>
+              </ul>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS8" aria-expanded="false" aria-controls="collapseS8">
+            <div class="row">
+              <div class="col-11">
+                <h5>Step 8. Rotating the display screen</h5>
+              </div>
+              <div class="col-1">
+                <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
+              </div>
+            </div>
+          </button>
+          <div class="collapse" id="collapseS8">
+            <div class="card card-body">
+              <ul>
+                <li>If your screen is displaying vertically, use VNC Viewer in your machine and access Eva remotely</li>
+                <li>Click on the Raspberry Pi OS task bar button > Preferences > Screen Configuration</li>
+                <li>On the Screen Configuration window, click on the Configure > Screens > HDMI 1 > Orientation > Left</li>
+                <li>After a reboot, the screen should be displaying horizontally, but the touch function might not be synchronized with the displayed orientation. </li>
+                <li>To fix this, open your terminal and enter this command:</li>
+                <div class="code_container">
+                  <p>cd /usr/share/X11/xorg.conf.d/</p>
+                  <p>ls</p>
+                </div>
+                <li>Locate the file named </li>
+              </ul>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS9" aria-expanded="false" aria-controls="collapseS8">
+            <div class="row">
+              <div class="col-11">
+                <h5>Step 9. Fixing the Visual Programming Language</h5>
+              </div>
+              <div class="col-1">
+                <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
+              </div>
+            </div>
+          </button>
+          <div class="collapse" id="collapseS9">
+            <div class="card card-body">
+              <ul>
+                <li>It's possible that when opening your Eva web application, the "Interaction" section may not be displaying correctly. This is due to the Visual Programming Language needing certain files from the GoJs Framework.</li>
               </ul>
             </div>
           </div>
@@ -509,8 +604,5 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script>function myFunction(x) {
-    x.classList.toggle("fa-angle-up");
-  } </script>
 </body>
 </html>
