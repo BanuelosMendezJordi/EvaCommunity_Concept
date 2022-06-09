@@ -177,6 +177,26 @@ table h5 {
     padding-top: 3%;
 }
 
+.hardware_div button{
+    background-color: rgb(219, 219, 219);
+    border-color: black;
+    color:black;
+    border-left: none;
+    border-right: none;
+    border-radius: 0%;
+    border-bottom: none;
+}
+
+.hardware_div button:hover{
+    background-color: rgb(219, 219, 219);
+    border-color: black;
+    color:black;
+    border-left: none;
+    border-right: none;
+    border-radius: 0%;
+    border-bottom: none;
+}
+
 #Hardware h2{
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
@@ -186,12 +206,19 @@ table h5 {
 }
 #Hardware h5{
     font-family: 'Oswald', sans-serif;
-    font-size: 30px;
     text-align: left;
+    font-size: 25px;
+    text-transform: uppercase;
 }
 #Hardware p {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
+    text-transform: none;
+}
+.hardware_div ul {
+    text-transform: none;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 18px;
 }
 
 /* Installing */
@@ -263,3 +290,4 @@ table h5 {
 .card-body a {
     color:white;
 }
+

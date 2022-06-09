@@ -270,32 +270,339 @@
     <section id="Hardware">
       <div class="container hardware_div">
         <h2>Assembling</h2>
-        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseH1" aria-expanded="false" aria-controls="collapseExample">
-          <div class="row">
-            <div class="col-11">
-              <h5>Step 1. Configuring the operating system</h5>
+        <div class="requirements row Table_Titles">
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS1" aria-expanded="false" aria-controls="collapseExample">
+            <div class="row">
+              <div class="col-11">
+                <h5>Step 1. Installing Raspberry Pi OS</h5>
+              </div>
+              <div class="col-1">
+                <h5><i class="fa-solid fa-angle-down"></i></h5>
+              </div>
             </div>
-            <div class="col-1">
-              <h5><i class="fa-solid fa-angle-down"></i></h5>
+          </button>
+          <div class="collapse" id="collapseS1">
+            <div class="card card-body sw">
+              <ul>
+                <li>Insert your SD card into your computer.</li>
+                <li>Run the Raspberry Pi Imager installer and follow the installation instructions.</li>
+                <li>Once finished, run the installed application.</li>
+                <li>In the operating system section, select Choose OS > Use Custom > Select the Raspberry Pi OS version provided in the Requirements section (should be named 2021-05-07-raspios-buster-armhf).</li>
+                <li>In the Storage section, click on Choose Storage > Select the corresponding SD card.</li>
+                <li>Once selected, click on the Write button and wait until the operating system files get written inside the SD card.</li>
+                <li>Remove the SD card when a pop-up window displays the indication.</li>
+              </ul>
             </div>
           </div>
-        </button>
-        <div class="collapse" id="collapseH1">
-          <div class="card card-body">
-            <ul>
-              <li>Insert the SD card into the Raspberry Pi 4B.</li>
-              <li>Turn on your Eva and wait a few moments until it boots up.</li>
-              <li>Follow the instructions in the initial setup; it's recommended to set the following as your username and password:</li>
-              <div class="code_container">
-                <p>Username: pi</p>
-                <p>Password: raspberry</p>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS2" aria-expanded="false" aria-controls="collapseExample">
+            <div class="row">
+              <div class="col-11">
+                <h5>Step 2. Configuring the operating system</h5>
               </div>
-              <li>Make sure to connect to a wireless network during this setup in order to obtain the initial updates.</li>
-              <li>Once finished, you can restart your operating system.</li>
-            </ul>
+              <div class="col-1">
+                <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
+              </div>
+            </div>
+          </button>
+          <div class="collapse" id="collapseS2">
+            <div class="card card-body">
+              <ul>
+                <li>Insert the SD card into the Raspberry Pi 4B.</li>
+                <li>Turn on your Eva and wait a few moments until it boots up.</li>
+                <li>Follow the instructions in the initial setup; it's recommended to set the following as your username and password:</li>
+                <div class="code_container">
+                  <p>Username: pi</p>
+                  <p>Password: raspberry</p>
+                </div>
+                <li>Make sure to connect to a wireless network during this setup in order to obtain the initial updates.</li>
+                <li>Once finished, you can restart your operating system.</li>
+              </ul>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS3" aria-expanded="false" aria-controls="collapseExample">
+            <div class="row">
+              <div class="col-11">
+                <h5>Step 3. Enabling remote access</h5>
+              </div>
+              <div class="col-1">
+                <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
+              </div>
+            </div>
+          </button>
+          <div class="collapse" id="collapseS3">
+            <div class="card card-body">
+              <ul>
+                <li>Click on the start menu button</li>
+                <li>Go to Preferences > Raspberry Pi Configuration </li>
+                <li>Enable the VNC Server service.</li>
+                <li>Save changes and close the window.</li>
+                <li>Open the terminal and type the following command: ipadress</li>
+                <li>On your main computer, download and run <a href="https://www.realvnc.com/en/connect/download/viewer/" target="_blank">VNC Viewer.</a></li>
+                <li>In the input box, type the provided IP address and press Enter.</li>
+                <li>If the same IP as the Raspberry was inserted, a small prompt should popup requesting your credentials. Type the credentials used during the setup configuration:</li>
+                <div class="code_container">
+                  <p>Username: pi</p>
+                  <p>Password: raspberry</p>
+                </div>
+                <li>You should be able to operate the Raspberry Pi OS remotely from your own machine.</li>
+              </ul>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS4" aria-expanded="false" aria-controls="collapseExample">
+            <div class="row">
+              <div class="col-11">
+                <h5>Step 4. Obtaining the required drivers and dependencies</h5>
+              </div>
+              <div class="col-1">
+                <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
+              </div>
+            </div>
+          </button>
+          <div class="collapse" id="collapseS4">
+            <div class="card card-body">
+              <ul>
+                <li>Before installing other dependencies, type this command in your console:</li>
+                <p>sudo apt update</p>
+                <li>NodeJS 14.16.0 is needed to run Javascript applications and scripts. To install it, run the following commands in your console (one by one): </li>
+                <div class="code_container">
+                  <p>curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash</p>
+                  <p>source ~/.profile</p>
+                  <p>nvm install v14.16.0</p>
+                  <p>nvm use v14.16.0</p>
+                </div>
+                <li>Node Package Manager (NPM) is another dependency needed to run certain commands. To install it run the following command:</li>      
+                <div class="code_container">
+                  <p>sudo apt install npm</p>
+                </div>
+                <li>Another element needed is Electron. Copy the following command to install it:</li>      
+                <div class="code_container">
+                  <p>sudo npm i electron -g --verbose --unsafe-perm=true --allow-root</p>
+                </div>
+                <li>Once done, install the Matrix Voice drivers using the following commands:</li>
+                <div class="code_container">
+                  <p>curl https://s3.amazonaws.com:443/apt.matrix.one/doc/apt-key.gpg | sudo apt-key add -</p>
+                  <p>echo "deb https://apt.matrix.one/raspbian $(lsb_release -sc) main"</p>
+                  <p>sudo tee /etc/apt/sources.list.d/matrixlabs.list</p>
+                </div>
+                <li>Update and reboot with the following commands:</li>
+                <div class="code_container">
+                  <p>sudo apt-get update</p>
+                  <p>sudo apt-get upgrade</p>
+                  <p>sudo reboot</p>
+                </div>
+                <li>Once rebooted, run the following commands and reboot again when done:</li>
+                <div class="code_container">
+                  <p>sudo apt install matrixio-kernel-modules</p>
+                  <p>sudo apt-get install matrixio-creator-init libmatrixio-creator-hal libmatrixio-creator-hal-dev</p>
+                  <p>sudo reboot</p>
+                </div>
+              </ul>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS5" aria-expanded="false" aria-controls="collapseS5">
+            <div class="row">
+              <div class="col-11">
+                <h5>Step 5. Setting up Eva's eyes</h5>
+              </div>
+              <div class="col-1">
+                <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
+              </div>
+            </div>
+          </button>
+          <div class="collapse" id="collapseS5">
+            <div class="card card-body">
+              <ul>
+                <li>Using the Raspberry Pi, download the AppImage and source code from <a href="https://github.com/amitjans/eva-app/releases/tag/v1.2-rc" target="_blank">here</a>.</li>
+                <li>Place the downloaded files in your desired path (it's recommended to place the files inside a new folder).</li>
+                <li>Open your terminal to enter the following command and create a new service:</li>
+                <div class="code_container">
+                  <p>nano /etc/systemd/system/eva.service</p>
+                </div>
+                <li>Once ready, add the following code inside the file you just created (note: change User and ExecStart lines according to your user and directory where you put the AppImage file):</li>
+                <div class="code_container">
+                  <p>[Unit]</p>
+                  <p>Description=Eva</p>
+                  <p>After=network.target</p>
+                  <br>
+                  <p>[Service]</p>
+                  <p>Type=simple</p>
+                  <p>User=USER</p>
+                  <p>LimitNOFILE=1024</p>
+                  <br>
+                  <p>Restart=on-failure</p>
+                  <p>RestartSec=10</p>
+                  <p>startLimitIntervalSec=60</p>
+                  <p>Environment=DISPLAY=:0</p>
+                  <p>ExecStart=/PATH/TO/THE/APP.AppImage</p>
+                  <br>
+                  <p>PermissionsStartOnly=true</p>
+                  <p>StandardOutput=syslog</p>
+                  <p>StandardError=syslog</p>
+                  <br>
+                  <p>[Install]</p>
+                  <p>WantedBy=multi-user.target</p>
+                </div>
+                <li>Save the files and exit the editor.</li>
+                <li>Enable the service to be started at boot with these console commands:</li>
+                <div class="code_container">
+                  <p>systemctl enable eva.service</p>
+                  <p>systemctl --system daemon-reload</p>
+                </div>
+              </ul>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS6" aria-expanded="false" aria-controls="collapseS5">
+            <div class="row">
+              <div class="col-11">
+                <h5>Step 6. Enabling the web application for online start</h5>
+              </div>
+              <div class="col-1">
+                <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
+              </div>
+            </div>
+          </button>
+          <div class="collapse" id="collapseS6">
+            <div class="card card-body">
+              <ul>
+                <li>The following step is to install pm2, a process manager that will help in keeping the Eva web application online to access and control Eva's main functions from your browser:</li>
+                <div class="code_container">
+                  <p>npm install pm2 -g</p>
+                </div>
+                <li>The following commands will enable the Eva service for online access from any device connecter to the same network:</li>
+                <div class="code_container">
+                  <p>pm2 start ./app.js --name eva</p>
+                  <p>pm2 startup</p>
+                  <p>sudo env PATH=$PATH:/home/pi/.config/nvm/versions/node/v14.16.0/bin /home/pi/.config/nvm/versions/node/v14.16.0/lib/node_modules/pm2/bin/pm2 startup systemd -u pi --hp /home/pi</p>
+                  <p>pm2 save</p>
+                </div>
+                <li>Now that everything is done, you should be able to access the web application by entering the robot's IP in your browser.</li>
+              </ul>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS7" aria-expanded="false" aria-controls="collapseS5">
+            <div class="row">
+              <div class="col-11">
+                <h5>Step 7. Enabling IBM and Google services</h5>
+              </div>
+              <div class="col-1">
+                <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
+              </div>
+            </div>
+          </button>
+          <div class="collapse" id="collapseS7">
+            <div class="card card-body">
+              <ul>
+                <li>There are certain services that need to be enabled for Eva to work with all the available functions. To enable them, open your browser and access Eva using the provided IP, then go to the Services tab.</li>
+                <li>An empty list should be displaying all the available services but with empty values. To proceed, input the following values inside the corresponding variables:</li>
+                <div class="code_container">
+                  <table>
+                    <tr>
+                      <th>Variable</th>
+                      <th></th>
+                      <th>Value</th>
+                    </tr>
+                    <tr>
+                      <td>TEXT_TO_SPEECH_APIKEY</td>
+                      <td> </td>
+                      <td>tts-api-key</td>
+                    </tr>
+                    <tr>
+                      <td>TEXT_TO_SPEECH_URL</td>
+                      <td> </td>
+                      <td>https://stream.watsonplatform.net/text-to-speech/api</td>
+                    </tr>
+                    <tr>
+                      <td>SPEECH_TO_TEXT_APIKEY</td>
+                      <td> </td>
+                      <td>stt-api-key</td>
+                    </tr>
+                    <tr>
+                      <td>SPEECH_TO_TEXT_URL</td>
+                      <td> </td>
+                      <td>https://stream.watsonplatform.net/speech-to-text/api</td>
+                    </tr>
+                    <tr>
+                      <td>TRANSLATOR_APIKEY</td>
+                      <td> </td>
+                      <td>translator-api-key</td>
+                    </tr>
+                    <tr>
+                      <td>TRANSLATOR_URL</td>
+                      <td> </td>
+                      <td>https://api.us-south.language-translator.watson.cloud.ibm.com/</td>
+                    </tr>
+                    <tr>
+                      <td>GOOGLE_APPLICATION_CREDENTIALS</td>
+                      <td> </td>
+                      <td>credencial.json</td>
+                    </tr>
+                    <tr>
+                      <td>DIALOGFLOW_PROJECT_ID</td>
+                      <td> </td>
+                      <td>google-dialogflow-proyect-name</td>
+                    </tr>
+                  </table>
+                </div>
+                <li>If the values were entered correctly, a green check icon should display.</li>
+              </ul>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS8" aria-expanded="false" aria-controls="collapseS8">
+            <div class="row">
+              <div class="col-11">
+                <h5>Step 8. Rotating the display screen</h5>
+              </div>
+              <div class="col-1">
+                <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
+              </div>
+            </div>
+          </button>
+          <div class="collapse" id="collapseS8">
+            <div class="card card-body">
+              <ul>
+                <li>If your screen is displaying vertically, use VNC Viewer in your machine and access Eva remotely</li>
+                <li>Click on the Raspberry Pi OS task bar button > Preferences > Screen Configuration</li>
+                <li>On the Screen Configuration window, click on the Configure > Screens > HDMI 1 > Orientation > Left</li>
+                <li>After a reboot, the screen should be displaying horizontally, but the touch function might not be synchronized with the displayed orientation. </li>
+                <li>To fix this, open your terminal and enter this command:</li>
+                <div class="code_container">
+                  <p>cd /usr/share/X11/xorg.conf.d/</p>
+                  <p>ls</p>
+                </div>
+                <li>Locate the file named d/40-libinput.conf and open it using this command</li>
+                <div class="code_container">
+                  <p>sudo nano 40-libinput.conf</p>
+                </div>
+                <li>Once opened, search for the section that says "Identifier... Touchscreen catchall"</li>
+                <li>Add the following line at the end of the section:</li>
+                <div class="code_container">
+                  <p>Option "TransformationMatrix" "0 -1 1 1 0 0 0 0 1" </p>
+                </div>
+                <li>Save your changes and reboot your system. After reeboting, the screen and touchscreen should have the same orientation.</li>
+              </ul>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS9" aria-expanded="false" aria-controls="collapseS8">
+            <div class="row">
+              <div class="col-11">
+                <h5>Observation. Visual Programming Language</h5>
+              </div>
+              <div class="col-1">
+                <h5><i class="fa-solid fa-angle-down""></i></h5>
+              </div>
+            </div>
+          </button>
+          <div class="collapse" id="collapseS9">
+            <div class="card card-body">
+              <ul>
+                <li>It's possible that when opening your Eva web application, the "Interaction" section may not be displaying correctly. This is due to the Visual Programming Language needing certain files from the GoJs Framework. Right click on the "Interaction" page and select the "Inspect" option to display the errors related with this issue.</li>
+                <li>Access the <a href="https://gojs.net/latest/index.html" target="_blank">GoJs website</a> to explore the available documentation and scripts.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
+    </div>
     </section>
     <section id="Software">
       <div class="container software_div">
