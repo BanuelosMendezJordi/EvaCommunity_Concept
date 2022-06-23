@@ -7,6 +7,10 @@ html {
 body {
     background-color: rgb(27, 156, 231);
 }
+
+body#post_body {
+    background-color: rgb(93, 167, 209);
+}
 /* Navigation Bar */
 nav a {
     font-family: 'Titillium Web', sans-serif;
@@ -167,4 +171,40 @@ header h2 {
 
 .app-element:hover {
     background-color: rgb(238, 238, 238);
+}
+
+.post-content {
+    text-align: center;
+    background-color: rgb(39, 39, 39);
+    color:white;
+    margin-bottom:1rem;
+    border-radius: 5px;
+}
+
+.post-content a {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.post-content i {
+    color: rgb(255, 238, 0);
+}
+
+.post-info {
+    background-color: white;
+    margin: 0.5rem;
+    color:black;
+    text-align: justify;
+}
+
+.post-info h5 {
+    font-weight: bold;
+}
+
+.user-info {
+    margin-top: 6vh;
+}
+
+.post-title {
+    padding-top:4px;
 }
