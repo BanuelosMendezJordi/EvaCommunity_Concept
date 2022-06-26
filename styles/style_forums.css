@@ -195,6 +195,7 @@ header h2 {
     margin: 0.5rem;
     color:black;
     text-align: justify;
+    margin-bottom:0;
 }
 
 .post-info h5 {
@@ -206,5 +207,46 @@ header h2 {
 }
 
 .post-title {
-    padding-top:4px;
+    padding-top:5px;
+}
+
+.post-title a {
+    font-size: small;
+    font-weight: normal;
+    margin-left: auto;
+}
+
+.comment-options a{
+    font-size: small;
+    text-decoration: none;
+    font-weight: normal;
+    font-style: italic;
+    color:rgb(190, 190, 190);
+    margin-top: 0px;
+}
+
+.comment-options {
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+hr {
+    margin-top:0px;
+}
+
+textarea {
+    resize:none;
+    margin:none;
+    width:100%;
+}
+
+.mypost h5{
+    font-weight: bold;
+}
+
+.reply-button {
+    margin:5px 0;
+}
+.reply-button i {
+    color:white;
 }
