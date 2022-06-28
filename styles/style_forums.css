@@ -250,3 +250,116 @@ textarea {
 .reply-button i {
     color:white;
 }
+
+@media(max-width:800px) {
+    #img_eyes {
+        display: none;
+    }
+    .navbar-nav {
+        display: none;
+    }
+    header {
+        padding: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    header h1 {
+        font-size: 35px;
+        text-align: center;
+    }
+    #main-subtext {
+        display: none;
+    }
+
+    nav a {
+        margin-right: auto;
+        margin-left: 0;
+    }
+
+    button .btn {
+        font-size: 0;
+    }
+    .form-select {
+        width:110px;
+    }
+
+    .card-icon {
+        margin-right: 15px;
+    }
+    .card-views {
+        display: none;
+    }
+    .card-text p {
+        font-size: 13px;
+    }
+    .stats-g {
+        display: none;
+    }
+    .card-info {
+        display: none;
+    }
+    .topic-icon {
+        display: none;
+    }
+
+    .topic-text {
+        text-align: center;
+    }
+    .hidden-phone {
+        display: none;
+    }
+
+    .topic-text a {
+        color: black;
+        text-align: left;
+    }
+
+    .topic-text h2 {
+        color: black;
+        text-align: left;
+    }
+
+    #Post-title {
+        display:none;
+    }
+
+    .user-info img {
+        width: 70px;
+    }
+
+    .user-text a {
+        font-size:15px;
+    }
+
+    .user-text p {
+        display: none;
+    }
+    .post-info p {
+        font-size: 12px;
+    }
+    .post-info h5 {
+        font-size: 15px;
+    }
+    .post-title {
+        text-align: left;
+    }
+
+    .post-title a {
+        font-size: 10px;
+        text-align: right;
+    }
+
+    .app-info p {
+        display: none;
+    }
+
+    .app-info h5 {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .col-2 i {
+        font-size: 50px;
+        text-align: center;
+    }
+}

@@ -8,6 +8,7 @@ nav a {
     font-family: 'Titillium Web', sans-serif;
     text-transform: uppercase;
 }
+
 .main-navigation {
     box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
 }
@@ -160,3 +161,54 @@ header {
     margin-right: 15%;
 }
 
+@media (max-width: 768px) {
+    nav a {
+        margin-right: auto;
+        margin-left: 0;
+    }
+    nav #logo_eyes {
+        display: none;
+    }
+    nav li {
+        display: none;
+    }
+
+    .Eva_Img img {
+        width: 150px;
+        margin-top:70px;
+    }
+
+    header {
+        height: 55vh;
+    }
+
+    #Header h1 {
+        font-size: 7rem;
+    }
+
+    #Header h2 {
+        display: none;
+    }
+
+    .Header_Info button {
+        width:12rem;
+    }
+
+    .About_Img {
+        display: none !important;
+    }
+
+    #About p {
+        font-size: 15px;
+    }
+
+    #About button {
+        margin-left: 30%;
+        margin-right: 30%;
+        margin-bottom: 15px;
+    }
+
+    .Feature_Image img {
+        display: none;
+    }
+}

@@ -290,3 +290,20 @@ table h5 {
 .card-body a {
     color:white;
 }
+
+@media (max-width: 768px) {
+    nav a {
+        margin-right: auto;
+        margin-left: 0;
+    }
+    nav #logo_eyes {
+        display: none;
+    }
+    nav li {
+        display: none;
+    }
+
+    header img {
+        width: 20px;
+    }
+}
