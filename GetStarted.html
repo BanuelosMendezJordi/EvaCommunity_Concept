@@ -18,8 +18,8 @@
 <body>
   <nav class="navbar main-navigation sticky-top navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid container">
-      <a href="Index.html"><img src="Resources/Logo_lb.png" style="width:80px;"></a>
-      <a href="Index.html"><img src="Resources/navbar-logo-eva_blue.png" style="width:150px; margin:10px;"></a>
+      <a href="Index.html" id="logo_eyes"><img src="Resources/Logo_lb.png" style="width:80px;"></a>
+      <a href="Index.html" id="logo_text"><img src="Resources/navbar-logo-eva_blue.png" style="width:150px; margin:10px;"></a>
       <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -80,7 +80,7 @@
             <div class="carousel-item active" data-bs-interval="10000">
               <div class="row">
                 <div class="col-3">
-                  <img src="Resources/Eva_Basic.PNG" class="d-block w-100" alt="...">
+                  <img src="Resources/Eva_Basic.PNG" class="d-block w-100 rbt_img" alt="...">
                 </div>
                 <div class="col-8 text version_text">
                     <h5>Eva Basic</h5>
@@ -90,8 +90,8 @@
                       <li>Animated eyes, which are displayed in a 5,5" touchscreen.</li>
                       <li>Head movement using two Dynamixel AX-12A servomotors.</li>
                     </ul>
-                    <h5><i class="fa-solid fa-cube"></i> 3D Printable models</h5>
-                    <ul>
+                    <h5 class="Printable_title"><i class="fa-solid fa-cube"></i> 3D Printable models</h5>
+                    <ul class="Printable_Components">
                       <li><a href="https://github.com/eva-social-robot/3dmodels/tree/main/Common%20Parts" target="_blank">Common Parts</a></li>
                       <li><a href="https://github.com/eva-social-robot/3dmodels/tree/main/Common%20Parts%20(Basic%20and%20with%20Camera%20versions)" target="_blank">Common Parts (Basic and Camera versions)</a></li>
                       <li><a href="https://github.com/eva-social-robot/3dmodels/tree/main/Basic%20Version" target="_blank">Basic Version</a></li>
@@ -102,7 +102,7 @@
             <div class="carousel-item" data-bs-interval="10000">
               <div class="row">
                 <div class="col-3">
-                  <img src="Resources/Eva_Camera.PNG" class="d-block w-100" alt="...">
+                  <img src="Resources/Eva_Camera.PNG" class="d-block w-100 rbt_img" alt="...">
                 </div>
                 <div class="col-8 text version_text">
                     <h5>Eva with Camera</h5>
@@ -111,8 +111,8 @@
                       <li>Vision or sight, thanks to an Intel RealSense Depth Camera D435i, located at the top of the screen.</li>
                       <li>This version modifies certain elements to properly adapt the camera device.</li>
                     </ul>
-                    <h5><i class="fa-solid fa-cube"></i> 3D Printable models:</h5>
-                    <ul>
+                    <h5 class="Printable_title"><i class="fa-solid fa-cube"></i> 3D Printable models:</h5>
+                    <ul class="Printable_Components">
                       <li><a href="https://github.com/eva-social-robot/3dmodels/tree/main/Common%20Parts" target="_blank">Common Parts</a></li>
                       <li><a href="https://github.com/eva-social-robot/3dmodels/tree/main/Common%20Parts%20(Basic%20and%20with%20Camera%20versions)" target="_blank">Common Parts (Basic and Camera versions)</a></li>
                       <li><a href="https://github.com/eva-social-robot/3dmodels/tree/main/Version%20with%20Camera" target="_blank">Camera Version</a></li>
@@ -132,8 +132,8 @@
                       <li>Movement: using two new motors/engines and wheels.</li>
                       <li>This version discards the small legs to provide a fitting design for the movement functions.</li>
                     </ul>
-                    <h5><i class="fa-solid fa-cube"></i> 3D Printable models:</h5>
-                    <ul>
+                    <h5 class="Printable_title"><i class="fa-solid fa-cube"></i> 3D Printable models:</h5>
+                    <ul class="Printable_Components">
                       <li><a href="https://github.com/eva-social-robot/3dmodels/tree/main/Common%20Parts" target="_blank">Common Parts</a></li>
                       <li><a href="https://github.com/eva-social-robot/3dmodels/tree/main/Version%20with%20Mobility" target="_blank">Version with Mobility</a></li>
                       <li><a href="https://github.com/eva-social-robot/3dmodels/tree/main/Version%20with%20Camera" target="_blank">Camera Version</a></li>
@@ -274,7 +274,7 @@
           <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseH1" aria-expanded="false" aria-controls="collapseExample">
             <div class="row">
               <div class="col-11">
-                <h5>Step 1. Installing Raspberry Pi OS</h5>
+                <h5>Step 1<span>. Installing Raspberry Pi OS</span></h5>
               </div>
               <div class="col-1">
                 <h5><i class="fa-solid fa-angle-down"></i></h5>
@@ -297,7 +297,7 @@
           <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseH2" aria-expanded="false" aria-controls="collapseExample">
             <div class="row">
               <div class="col-11">
-                <h5>Step 2. Configuring the operating system</h5>
+                <h5>Step 2<span>. Configuring the operating system</span></h5>
               </div>
               <div class="col-1">
                 <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
@@ -322,7 +322,7 @@
           <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseH3" aria-expanded="false" aria-controls="collapseExample">
             <div class="row">
               <div class="col-11">
-                <h5>Step 3. Enabling remote access</h5>
+                <h5>Step 3<span>. Enabling remote access</span></h5>
               </div>
               <div class="col-1">
                 <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
@@ -351,7 +351,7 @@
           <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseH4" aria-expanded="false" aria-controls="collapseExample">
             <div class="row">
               <div class="col-11">
-                <h5>Step 4. Obtaining the required drivers and dependencies</h5>
+                <h5>Step 4<span>. Obtaining the required drivers and dependencies</span></h5>
               </div>
               <div class="col-1">
                 <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
@@ -402,7 +402,7 @@
           <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseH5" aria-expanded="false" aria-controls="collapseS5">
             <div class="row">
               <div class="col-11">
-                <h5>Step 5. Setting up Eva's eyes</h5>
+                <h5>Step 5<span>. Setting up Eva's eyes</span></h5>
               </div>
               <div class="col-1">
                 <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
@@ -454,7 +454,7 @@
           <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseH6" aria-expanded="false" aria-controls="collapseS5">
             <div class="row">
               <div class="col-11">
-                <h5>Step 6. Enabling the web application for online start</h5>
+                <h5>Step 6<span>. Enabling the web application for online start</span></h5>
               </div>
               <div class="col-1">
                 <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
@@ -482,7 +482,7 @@
           <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseH7" aria-expanded="false" aria-controls="collapseS5">
             <div class="row">
               <div class="col-11">
-                <h5>Step 7. Enabling IBM and Google services</h5>
+                <h5>Step 7<span>. Enabling IBM and Google services</span></h5>
               </div>
               <div class="col-1">
                 <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
@@ -550,7 +550,7 @@
           <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseH8" aria-expanded="false" aria-controls="collapseS8">
             <div class="row">
               <div class="col-11">
-                <h5>Step 8. Rotating the display screen</h5>
+                <h5>Step 8<span>. Rotating the display screen</span></h5>
               </div>
               <div class="col-1">
                 <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
@@ -585,7 +585,7 @@
           <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseH9" aria-expanded="false" aria-controls="collapseS8">
             <div class="row">
               <div class="col-11">
-                <h5>Observation. Visual Programming Language</h5>
+                <h5>Observation<span>. Visual Programming Language</span></h5>
               </div>
               <div class="col-1">
                 <h5><i class="fa-solid fa-angle-down""></i></h5>
@@ -611,7 +611,7 @@
           <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS1" aria-expanded="false" aria-controls="collapseExample">
             <div class="row">
               <div class="col-11">
-                <h5>Step 1. Installing Raspberry Pi OS</h5>
+                <h5>Step 1<span>. Installing Raspberry Pi OS</span></h5>
               </div>
               <div class="col-1">
                 <h5><i class="fa-solid fa-angle-down"></i></h5>
@@ -634,7 +634,7 @@
           <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS2" aria-expanded="false" aria-controls="collapseExample">
             <div class="row">
               <div class="col-11">
-                <h5>Step 2. Configuring the operating system</h5>
+                <h5>Step 2<span>. Configuring the operating system</span></h5>
               </div>
               <div class="col-1">
                 <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
@@ -659,7 +659,7 @@
           <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS3" aria-expanded="false" aria-controls="collapseExample">
             <div class="row">
               <div class="col-11">
-                <h5>Step 3. Enabling remote access</h5>
+                <h5>Step 3<span>. Enabling remote access</span></h5>
               </div>
               <div class="col-1">
                 <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
@@ -688,7 +688,7 @@
           <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS4" aria-expanded="false" aria-controls="collapseExample">
             <div class="row">
               <div class="col-11">
-                <h5>Step 4. Obtaining the required drivers and dependencies</h5>
+                <h5>Step 4<span>. Obtaining the required drivers and dependencies</span></h5>
               </div>
               <div class="col-1">
                 <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
@@ -739,7 +739,7 @@
           <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS5" aria-expanded="false" aria-controls="collapseS5">
             <div class="row">
               <div class="col-11">
-                <h5>Step 5. Setting up Eva's eyes</h5>
+                <h5>Step 5<span>. Setting up Eva's eyes</span></h5>
               </div>
               <div class="col-1">
                 <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
@@ -791,7 +791,7 @@
           <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS6" aria-expanded="false" aria-controls="collapseS5">
             <div class="row">
               <div class="col-11">
-                <h5>Step 6. Enabling the web application for online start</h5>
+                <h5>Step 6<span> Enabling the web application for online start</span></h5>
               </div>
               <div class="col-1">
                 <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
@@ -819,7 +819,7 @@
           <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS7" aria-expanded="false" aria-controls="collapseS5">
             <div class="row">
               <div class="col-11">
-                <h5>Step 7. Enabling IBM and Google services</h5>
+                <h5>Step 7<span>. Enabling IBM and Google services</span></h5>
               </div>
               <div class="col-1">
                 <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
@@ -887,7 +887,7 @@
           <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS8" aria-expanded="false" aria-controls="collapseS8">
             <div class="row">
               <div class="col-11">
-                <h5>Step 8. Rotating the display screen</h5>
+                <h5>Step 8<span>. Rotating the display screen</span></h5>
               </div>
               <div class="col-1">
                 <h5><i class="fa-solid fa-angle-down" onclick="myFunction(this)"></i></h5>
@@ -922,7 +922,7 @@
           <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS9" aria-expanded="false" aria-controls="collapseS8">
             <div class="row">
               <div class="col-11">
-                <h5>Observation. Visual Programming Language</h5>
+                <h5>Observation<span>. Visual Programming Language</span></h5>
               </div>
               <div class="col-1">
                 <h5><i class="fa-solid fa-angle-down""></i></h5>

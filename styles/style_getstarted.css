@@ -291,7 +291,7 @@ table h5 {
     color:white;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     nav a {
         margin-right: auto;
         margin-left: 0;
@@ -305,5 +305,97 @@ table h5 {
 
     header img {
         width: 20px;
+    }
+
+    #logo_eyes {
+        display: none;
+    }
+
+    .header_div h2 {
+        font-size: 40px;
+    }
+
+    .header_div img {
+        max-width: 160px;
+        min-width: 160px;
+    }
+
+    .header_div p {
+        font-size: 11px;
+    }
+
+    #Eva_Versions h2 {
+        font-size: 40px;
+    }
+    .Printable_title {
+        display: none;
+    }
+    .version_text {
+        height: 100%;
+    }
+    .carousel-item img {
+        min-height: 180px;
+        max-height: 180px;
+        min-width: 95px;
+        max-width: 95px;
+    }
+
+    .versions_title p {
+        display: none;
+    }
+
+    #Eva_Versions .version_text p {
+        font-size: 13px;
+    }
+    #Eva_Versions .version_text li {
+        font-size: 13px;
+    }
+    #Eva_Versions .Printable_Components {
+        display: none;
+    }
+    #Eva_Versions .Printable_title h5 {
+        display: none;
+    }
+
+    .table p {
+        display:none;
+    }
+
+    .table img {
+        display: none;
+    }
+
+    .table h5 {
+        text-align: center;
+        font-size: 13px;
+    }
+    .Title_Requirements {
+        display: none;
+    }
+
+    .Components_Section ul {
+        font-size: 13px;
+    }
+
+    .hardware_div h2 {
+        font-size: 20px;
+    }
+    .hardware_div span {
+        display: none;
+    }
+    .software_div span {
+        display: none;
+    }
+    .collapse ul {
+        font-size: 13px;
+    }
+    #Requirements h2 {
+        font-size: 40px;;
+    }
+    #Hardware h2 {
+        font-size: 40px;;
+    }
+    #Software h2 {
+        font-size: 40px;;
     }
 }
